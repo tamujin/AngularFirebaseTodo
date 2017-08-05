@@ -1,0 +1,17 @@
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.container {
+    padding-top: 160px;
+    width: 720px;
+    max-width: 100%;
+}
+.form-control {
+    margin-top: 5px;
+}
+button, checkbox {
+    margin-top: 5px;
+}

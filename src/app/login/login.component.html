@@ -1,0 +1,30 @@
+<div class="container">
+      <form #loginForm="ngForm" class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        
+        <input type="email" #emailControl="ngModel" 
+        [(ngModel)]="email" id="email" name="email" 
+        maxlength="70" email class="form-control" 
+        placeholder="Email address" required="" autofocus="">
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+        
+        <input type="password" id="password" name="password" 
+        #passwordControl="ngModel" [(ngModel)]="password"
+        class="form-control" placeholder="Password" required="">
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" 
+        type="submit" 
+        (click) = "signIn()">Sign in</button>
+        <p *ngIf="msg" class="text-danger">{{msg}}</p>
+      </form>
+
+      {{loginForm.form.valid}}
+
+    </div>
